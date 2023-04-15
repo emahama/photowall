@@ -1,0 +1,60 @@
+html {
+  font-size: 10px; /*Default font-size is 16 px*/
+  font-family: sans-serif;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+h1 {
+  font-family: "Alkatra", cursive; /*This is not installed, to use we need to define a font-face*/
+  text-align: center;
+  font-size: 13rem; /*! rem is equal to html element font-size*/
+  font-weight: 100; /*Range is 100 - 900*/
+  margin: 2rem 0; /*V margin H margins*/
+  letter-spacing: -15px; /*To spread the letters used +ve numbers*/
+  color: black;
+}
+
+@font-face {
+  font-family: "Alkatra", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Lobster&display=swap");
+}
+
+.photoGrid {
+  max-width: 1000px;
+  margin: 0 auto; /* Use auto on horizontal margin to center the figures*/
+  display: flex; /*This display the content of the div side by side (horizontally)*/
+  /* flex-direction: column; */ /*Display vertically */
+  flex-wrap: wrap;
+}
+
+.figure {
+  border: 1px solid #d3d3d3;
+  padding: 2rem;
+  flex-basis: calc(
+    33.33% - 4rem
+  ); /*Set the winth to 33% of the containers width - 4rem*/
+  flex-grow: 1; /*Figure on the same row will share the available width*/
+  margin: 2rem 2rem 2rem;
+}
+
+.photo {
+  width: calc(100% + 4rem);
+  height: 80%;
+  margin: -2rem 0rem 0rem -2rem;
+}
+
+.button-container {
+  display: flex; /*This makes it child element (remove button ) flex item*/
+  justify-content: center; /*For this to work, display need to be set to flex*/
+}
+
+.remove-button {
+  flex-basis: 48%;
+  color: red;
+  font-size: 15px;
+  border: 2px solid #f2f2f2;
+  line-height: 2;
+  padding: 5px;
+}
